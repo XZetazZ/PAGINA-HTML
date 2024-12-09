@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Ordenadores - Tienda Exclusiva</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet"> <!-- Fuente personalizada -->
+    <link rel="stylesheet" href="pagina.css"> <!-- Vinculamos el CSS -->
+    <style>
+        .product-details {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>¡Compra tu Ordenador Ideal!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="localizacion.html">Nuestra localizacion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <section id="home">
+        <div class="banner">
+            <h2>La tienda online de ordenadores más fiable</h2>
+            <p>Encuentra el ordenador perfecto, ya sea para trabajar, jugar o trabajar.</p>
+            <a href="PaginaProductos.html" class="btn">Ver Productos</a>
+            <link rel="stylesheet" href="../HTML PAGINA/PaginaProductos.html">
+            <link rel="stylesheet" href="../HTML PAGINA/sobreNosotros.html">
+        </div>
+    </section>
+
+    <!-- Tabla de Productos -->
+    <section id="productos">
+        <h2> ¡Nuestros productos mas vendidos!</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <img src="ordenador.jpg" alt="Ordenador Gamer">
+                <h3>Ordenador Gamer</h3>
+                <p>Intel i5 14th, 16GB RAM, RTX 3060 - 1200€</p>
+                <button class="btn" onclick="toggleDetails('gamer')">Ver Más</button>
+                <div id="gamer" class="product-details">
+                    <h4>Detalles del Producto:</h4>
+                    <p><strong>Descripción:</strong> Este ordenador está diseñado especialmente para gamers. Con un procesador Intel i5 de 14ª generación y una tarjeta gráfica RTX 3060, podrás disfrutar de los juegos más exigentes con un rendimiento increíble.</p>
+                    <h5>Especificaciones:</h5>
+                    <ul>
+                        <li><strong>Procesador:</strong> Intel i5 14ª Generación</li>
+                        <li><strong>Memoria RAM:</strong> 16GB DDR4</li>
+                        <li><strong>Placa Base:</strong> ASUS ROG Strix B550-F</li>
+                        <li><strong>Tarjeta Gráfica:</strong> NVIDIA RTX 3060 12GB</li>
+                        <li><strong>Almacenamiento:</strong> SSD 1TB</li>
+                        <li><strong>Precio:</strong> 1200€</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="Lenovo portatil.jpg" alt="Portátil Ultrabook">
+                <h3>Portátil Ultrabook</h3>
+                <p>Intel i5, 8GB RAM, SSD 512GB - 800€</p>
+                <button class="btn" onclick="toggleDetails('ultrabook')">Ver Más</button>
+                <div id="ultrabook" class="product-details">
+                    <h4>Detalles del Producto:</h4>
+                    <p><strong>Descripción:</strong> Este portátil ultrabook es perfecto para profesionales que necesitan portabilidad sin sacrificar el rendimiento. Ideal para tareas de oficina, navegación web y trabajos multimedia ligeros.</p>
+                    <h5>Especificaciones:</h5>
+                    <ul>
+                        <li><strong>Procesador:</strong> Intel i5</li>
+                        <li><strong>Memoria RAM:</strong> 8GB DDR4</li>
+                        <li><strong>Placa Base:</strong> ASUS VivoBook 15</li>
+                        <li><strong>Almacenamiento:</strong> SSD 512GB</li>
+                        <li><strong>Precio:</strong> 800€</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="ordenadorOficina.jpg" alt="Ordenador de Oficina">
+                <h3>Ordenador de Oficina</h3>
+                <p>Intel i3, 4GB RAM, HDD 1TB - 500€</p>
+                <button class="btn" onclick="toggleDetails('oficina')">Ver Más</button>
+                <div id="oficina" class="product-details">
+                    <h4>Detalles del Producto:</h4>
+                    <p><strong>Descripción:</strong> Este ordenador de oficina es ideal para tareas diarias como procesamiento de textos, navegación por Internet y manejo de archivos. Con un diseño simple y eficiente.</p>
+                    <h5>Especificaciones:</h5>
+                    <ul>
+                        <li><strong>Procesador:</strong> Intel i3</li>
+                        <li><strong>Memoria RAM:</strong> 4GB DDR4</li>
+                        <li><strong>Placa Base:</strong> ASUS Prime H410M-E</li>
+                        <li><strong>Almacenamiento:</strong> HDD 1TB</li>
+                        <li><strong>Precio:</strong> 500€</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video YouTube -->
+    <section id="video">
+        <h2>Descubre nuestros productos en acción</h2>
+        <iframe width="700" height="400" src="PcCom Imperial Limited Edition.mp4"0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <form action="confirmacion.html" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa nombres y apellidos" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" placeholder="Ponganos tu numero de pedido y otras dudas" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tienda PcSpain. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script JavaScript para mostrar detalles del producto -->
+    <script>
+        function toggleDetails(productId) {
+            var details = document.getElementById(productId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+

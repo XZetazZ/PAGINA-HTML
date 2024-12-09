@@ -1,0 +1,390 @@
+/* Reset de márgenes y padding */
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y color base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo gradiente */
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #f06595;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f06595;
+}
+
+/* Sección Banner */
+.banner {
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner .btn {
+    background-color: #f06595;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.banner .btn:hover {
+    background-color: #d84b7e;
+}
+
+/* Contenedor de Productos */
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+/* Contenedor de productos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Hace que los productos se acomoden en varias filas */
+    gap: 20px; /* Espacio entre los productos */
+    justify-content: space-evenly; /* Distribuye los productos de manera uniforme */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cada tarjeta de producto */
+.product_card {
+    background-color: white;
+    color: black;
+    width: calc(33.333% - 20px); /* Cada producto ocupa un 33.333% del ancho del contenedor, con un margen */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Margen inferior para los productos */
+}
+
+/* Imagen dentro de la tarjeta */
+.product_card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Títulos de los productos */
+.product_card h3 {
+    margin-top: 20px;
+    font-size: 1.2em; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+}
+
+/* Descripción y precio del producto */
+.product_card p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Estilo para el botón */
+.product_card .btn {
+    background-color: #2575fc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta de producto */
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.product-card .btn:hover {
+    background-color: #6a11cb;
+}
+
+/* Responsividad: Adaptación para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px); /* En pantallas medianas, cada producto ocupa el 50% del ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* En pantallas pequeñas, cada producto ocupa el 100% del ancho */
+    }
+}
+
+
+.product_card h3 {
+    margin-top: 20px;
+}
+
+.product_card p {
+    margin-bottom: 15px;
+}
+
+
+
+.product-card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 20px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+.product-card .btn {
+    background-color: #2575fc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card .btn:hover {
+    background-color: #6a11cb;
+}
+
+/* Video de YouTube */
+iframe {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Formulario de Contacto */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f06595;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+/* Contenedor de productos */
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: nowrap; /* Mantiene los productos en una sola fila */
+    gap: 20px; /* Espacio entre los productos */
+    justify-content: flex-start; /* Alinea los productos hacia la izquierda */
+    overflow-x: auto; /* Permite hacer scroll horizontal si es necesario */
+    padding: 20px;
+}
+
+/* Cada tarjeta de producto */
+.tarjeta-producto {
+    background-color: white;
+    color: black;
+    width: 220px; /* Hace las tarjetas más pequeñas */
+    padding: 15px; /* Ajusta el relleno de la tarjeta */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Margen inferior para los productos */
+    flex-shrink: 0; /* Evita que las tarjetas se reduzcan de tamaño */
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta-producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Títulos de los productos */
+.tarjeta-producto h3 {
+    margin-top: 15px;
+    font-size: 1.1em; /* Tamaño de fuente ajustado */
+    font-weight: bold;
+}
+
+/* Descripción y precio del producto */
+.tarjeta-producto p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Estilo para el botón */
+.tarjeta-producto .btn {
+    background-color: #2575fc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta de producto */
+.tarjeta-producto:hover {
+    transform: translateY(-10px);
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.tarjeta-producto .btn:hover {
+    background-color: #6a11cb;
+}
+
+/* Responsividad: Adaptación para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .tarjeta-producto {
+        width: 180px; /* Hace las tarjetas más pequeñas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-producto {
+        width: 150px; /* Hace las tarjetas más pequeñas en pantallas móviles */
+    }
+}
+/* Estilo para la sección "Política de Privacidad" */
+#privacy-policy {
+    padding: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#privacy-policy h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.privacy-container h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.privacy-container p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .privacy-container {
+        padding: 10px;
+    }
+}
+
+
+
+
